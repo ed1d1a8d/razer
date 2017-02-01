@@ -22,7 +22,7 @@ set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -DDEBUG -fsanitize=undefined -fs
 
 find_path(LIBUSB_INCLUDE_PATH
 	NAMES libusb.h
-	PATHS "/usr/include/libusb" "/usr/include/libusb-1.0"
+	PATHS "/usr/include/libusb" "/usr/include/libusb-1.0" "/usr/local/include/libusb" "/usr/local/include/libusb-1.0"
 )
 include_directories(AFTER ${LIBUSB_INCLUDE_PATH})
 set(CMAKE_REQUIRED_INCLUDES "${LIBUSB_INCLUDE_PATH};${CMAKE_REQUIRED_INCLUDES}")

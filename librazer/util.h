@@ -8,10 +8,13 @@
 #include <stdint.h>
 #include <sys/time.h>
 #include <time.h>
-#include <byteswap.h>
 #include <stdio.h>
 #include <stdbool.h>
 
+#include <libkern/OSByteOrder.h>
+#define bswap_16 OSSwapInt16
+#define bswap_32 OSSwapInt32
+#define bswap_64 OSSwapInt64
 
 #undef min
 #undef max

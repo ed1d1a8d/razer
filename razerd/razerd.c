@@ -34,11 +34,10 @@
 #include <stdarg.h>
 #include <stdbool.h>
 
-#ifdef __DragonFly__
-#include <sys/endian.h>
-#else
-#include <byteswap.h>
-#endif
+#include <libkern/OSByteOrder.h>
+#define bswap_16 OSSwapInt16
+#define bswap_32 OSSwapInt32
+#define bswap_64 OSSwapInt64
 
 
 #undef min
